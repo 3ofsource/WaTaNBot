@@ -110,7 +110,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos = {Sudo_Id,782717203,1209927445}
+local ListSudos = {Sudo_Id,782717203,1884478855}
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -137,7 +137,7 @@ if tonumber(UserId) == tonumber(782717203) then
 Status = true
 elseif The_ControllerAll(UserId) then
 Status = true
-elseif tonumber(UserId) == tonumber(1209927445) then
+elseif tonumber(UserId) == tonumber(1884478855) then
 Status = true
 elseif tonumber(UserId) == tonumber(Sudo_Id) then  
 Status = true
@@ -172,7 +172,7 @@ MalekAsase = Redis:sismember(TheWaTaN.."WaTaN:MalekAsase:Group"..ChatId,UserId)
 StatusMember = merolua.getChatMember(ChatId,UserId).status.Merotele
 if UserId == tonumber(782717203) then
 Status = 'مطــور السـورس 𖦴'
-elseif UserId == tonumber(1209927445) then
+elseif UserId == tonumber(1884478855) then
 Status = 'مبرمج السـورس 𖦴'
 elseif UserId == tonumber(Sudo_Id) then  
 Status = 'المطور الاساسي'
@@ -943,7 +943,7 @@ StatusMember = merolua.getChatMember(ChatId,UserId).status.Merotele
 MalekAsase = Redis:sismember(TheWaTaN.."WaTaN:MalekAsase:Group"..ChatId,UserId)
 if UserId == 782717203 then
 Status = true
-elseif UserId == 1209927445 then
+elseif UserId == 1884478855 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -989,7 +989,7 @@ StatusMember = merolua.getChatMember(ChatId,UserId).status.Merotele
 MalekAsase = Redis:sismember(TheWaTaN.."WaTaN:MalekAsase:Group"..ChatId,UserId)
 if UserId == 782717203 then
 Status = true
-elseif UserId == 1209927445 then
+elseif UserId == 1884478855 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -1033,7 +1033,7 @@ StatusMember = merolua.getChatMember(ChatId,UserId).status.Merotele
 MalekAsase = Redis:sismember(TheWaTaN.."WaTaN:MalekAsase:Group"..ChatId,UserId)
 if UserId == 782717203 then
 Status = true
-elseif UserId == 1209927445 then
+elseif UserId == 1884478855 then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -1186,7 +1186,7 @@ end
 if data.content.text then
 text = data.content.text.text
 end
-local Name_Bot = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")
+local Name_Bot = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")
 if text and text:match('^'..Name_Bot..' ') then
 text = text:gsub('^'..Name_Bot..' ','')
 end
@@ -1209,7 +1209,7 @@ end
 if tonumber(msg.sender_id.user_id) == 782717203 then
 msg.Name_Controller = 'مطــور السـورس 𖦴 '
 msg.The_Controller = 1
-elseif tonumber(msg.sender_id.user_id) == 1209927445 then
+elseif tonumber(msg.sender_id.user_id) == 1884478855 then
 msg.Name_Controller = 'مبرمج السـورس 𖦴 '
 msg.The_Controller = 1
 elseif tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
@@ -1412,7 +1412,7 @@ if UserInfoo.first_name == "" then
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- قناة السورس .', url='t.me/BJlll17'},
+{text = '- قناة السورس .', url='t.me/I74III1'},
 },
 }
 else
@@ -1957,7 +1957,7 @@ local Lock_Bots = Redis:get(TheWaTaN.."WaTaN:Lock:Bot:kick"..msg_chat_id)
 for k,v in pairs(msg.content.member_user_ids) do
 if v == tonumber(TheWaTaN) then
 local idephoto = Redis:get(TheWaTaN..':WELCOME_BOT')
-local Bot_Name = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")
+local Bot_Name = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")
 if idephoto then
 
 TextBot = '\n*✯︙اهلا انآ بوت اسمي '..Bot_Name..''..
@@ -1968,7 +1968,7 @@ TextBot = '\n*✯︙اهلا انآ بوت اسمي '..Bot_Name..''..
 keyboard = {} 
 keyboard.inline_keyboard = {
   {{text="✯ غادر ✯",callback_data="/LeaveBotPic:"..msg.sender_id.user_id},{text = '✯ تفعيل ✯', callback_data = msg.sender_id.user_id..'/onlinebott'..msg_chat_id}},
-	{{text = '- قناة السورس .',url="t.me/BJlll17"}},
+	{{text = '- 𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝚆𝙰𝚃𝙰𝙽 .',url="t.me/I74III1"}},
 }
 local msg_id = msg.id/2097152/0.5
 return https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id=' .. msg.chat_id .. '&photo='..idephoto..'&caption=' .. URL.escape(TextBot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -1983,7 +1983,7 @@ TextBot = '\n*✯︙اهلا انآ بوت اسمي '..Bot_Name..''..
 keyboard = {} 
 keyboard.inline_keyboard = {
   {{text="✯ غادر ✯",callback_data="/LeaveBotPic:"..msg.sender_id.user_id},{text = '✯ تفعيل ✯', callback_data = msg.sender_id.user_id..'/onlinebott'..msg_chat_id}},
-	{{text = '- قناة السورس .',url="t.me/BJlll17"}},
+	{{text = '- 𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝚆𝙰𝚃𝙰𝙽 .',url="t.me/I74III1"}},
 }
 local msg_id = msg.id/2097152/0.5
 return https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id=' .. msg.chat_id .. '&photo='..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id..'&caption=' .. URL.escape(TextBot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2006,7 +2006,7 @@ return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { 
 end
 local idephoto = Redis:get(TheWaTaN..':WELCOME_BOT')
 if idephoto then
-local Bot_Name = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")
+local Bot_Name = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")
 return merolua.sendPhoto(msg.chat_id, msg.id, idephoto,
 '\n*✯︙اهلا انآ بوت اسمي '..Bot_Name..''..
 '\n✯︙آختصـآصـي حمـآيهہ‌‏ آلمـجمـوعآت'..
@@ -5269,7 +5269,7 @@ return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { 
 end
 if not Redis:get(TheWaTaN..'Abs:ChId') then
 Redis:set(TheWaTaN..'WaTaN:Channel:Redis'..msg_chat_id..':'..msg.sender_id.user_id,true)
-return merolua.sendText(msg_chat_id,msg_id,"\n✯︙اهلا بك عزيزي ، \n✯︙ارفع البوت مشرف في قناتك\n✯︙ثم ارسل معرف القناة\n✯︙مثال على معرف القناة 👇\n✯︙@BJlll17\n✯︙او قم باعادة توجيه رساله من القناة الخاصه او العامه","md",true)  
+return merolua.sendText(msg_chat_id,msg_id,"\n✯︙اهلا بك عزيزي ، \n✯︙ارفع البوت مشرف في قناتك\n✯︙ثم ارسل معرف القناة\n✯︙مثال على معرف القناة 👇\n✯︙@I74III1\n✯︙او قم باعادة توجيه رساله من القناة الخاصه او العامه","md",true)  
 else
 local Check = https.request('https://api.telegram.org/bot'..Token..'/getChat?chat_id='..Redis:get(TheWaTaN.."Abs:ChId"))
 local GetInfo = JSON.decode(Check)
@@ -5293,7 +5293,7 @@ if not msg.ControllerBot then
 return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
 Redis:set(TheWaTaN..'WaTaN:Channel:Redis'..msg_chat_id..':'..msg.sender_id.user_id,true)
-return merolua.sendText(msg_chat_id,msg_id,"\n✯︙اهلا بك عزيزي ، \n✯︙ارفع البوت مشرف في قناتك\n✯︙ثم ارسل معرف القناة\n✯︙مثال على معرف القناة 👇\n✯︙@BJlll17\n✯︙او قم باعادة توجيه رساله من القناة الخاصه او العامه","md",true)  
+return merolua.sendText(msg_chat_id,msg_id,"\n✯︙اهلا بك عزيزي ، \n✯︙ارفع البوت مشرف في قناتك\n✯︙ثم ارسل معرف القناة\n✯︙مثال على معرف القناة 👇\n✯︙@I74III1\n✯︙او قم باعادة توجيه رساله من القناة الخاصه او العامه","md",true)  
 end
 if text == 'الاشتراك الاجباري' and ChCheck(msg) or text == 'الاشتراك الاجباري ✯' and ChCheck(msg) then
 if not msg.ControllerBot then 
@@ -5428,7 +5428,7 @@ echo '*------------------------------\n*✯︙ •⊱ { مـده تـشغيـل 
 ]]):read('*all'),"md")
 end
 if text == "مسح تخزين البوت" and ChCheck(msg) or text == "مسح تخزين البوت ✯" and ChCheck(msg) then
-if tonumber(msg.sender_id.user_id) == tonumber(1209927445) then 
+if tonumber(msg.sender_id.user_id) == tonumber(1884478855) then 
 local keys = Redis:keys(TheWaTaN..'*')
 for i = 1, #keys do
 Redis:del(keys[i])
@@ -5439,7 +5439,7 @@ end
 if text == 'معلومات التنصيب' and ChCheck(msg) or text == 'معلومات التنصيب ✯' and ChCheck(msg) then
  if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then 
  usersend = true
- elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then 
+ elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then 
  usersend = true
  else
  usersend = false
@@ -5471,7 +5471,7 @@ return merolua.sendText(msg_chat_id,msg_id, '✯︙حسننا عزيزي \n✯ �
 end 
 end
 if text == "ضع تاريخ الاشتراك" and ChCheck(msg) or text == "ضع تاريخ الاشتراك ✯" and ChCheck(msg) then
-if msg.sender_id.user_id ~= 1209927445 then 
+if msg.sender_id.user_id ~= 1884478855 then 
 return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { مطور السورس }* ',"md",true)  
 end
 Redis:set(TheWaTaN.."data:botsashtrak"..msg_chat_id..msg.sender_id.user_id,true)
@@ -5628,7 +5628,7 @@ end
 end   
 Get_Json = Get_Json..'],'
 end
-Get_Json = Get_Json..'"Dev":"a_iuw"}'
+Get_Json = Get_Json..'"Dev":"F9F9F"}'
 end
 Get_Json = Get_Json..'}}'
 local File = io.open('./'..UserBot..'.json', "w")
@@ -5785,7 +5785,7 @@ end
 end   
 Get_Json = Get_Json..'],'
 end
-Get_Json = Get_Json..'"Dev":"a_iuw"}'
+Get_Json = Get_Json..'"Dev":"F9F9F"}'
 end
 Get_Json = Get_Json..'}}'
 local File = io.open('./'..UserBot..'.json', "w")
@@ -6443,7 +6443,7 @@ end
 Redis:set(TheWaTaN.."WaTaN:Game:akape"..msg.chat_id..allgetr,SendJj)
 if tonumber(allgetr) == 782717203 then
 testser = true
-elseif tonumber(allgetr) == 1209927445 then
+elseif tonumber(allgetr) == 1884478855 then
 testser = true
 elseif The_ControllerAll(allgetr) == true then  
 testser = true
@@ -6931,7 +6931,7 @@ KlamSpeed = {
 " من أول من سل سيف في سبيل الله ؟",
 " من أول نبي قال أما بعد ؟",
 " كم كان عدد المسلمين في غزوة أحد ؟",
-" من الذي كفل بغدادة مريم؟",
+" من الذي كفل عوفة مريم؟",
 " من هو النبي الذي روادته المرأة التي تربى في بيتها؟",
 " من النبي الذي طلب منه قومه أن ينزل لهم مائدة من السماء ؟",
 " من هو أول الأئمة الأربعة ؟",
@@ -6954,7 +6954,7 @@ name = string.gsub(name," من أول من أدخل عبادة الأصنام ؟
 name = string.gsub(name," من أول من سل سيف في سبيل الله ؟","الزبير بن العوام")
 name = string.gsub(name," من أول نبي قال أما بعد ؟","داود")
 name = string.gsub(name," كم كان عدد المسلمين في غزوة أحد ؟","100")
-name = string.gsub(name," من الذي كفل بغدادة مريم؟","زكريا")
+name = string.gsub(name," من الذي كفل عوفة مريم؟","زكريا")
 name = string.gsub(name," من هو النبي الذي روادته المرأة التي تربى في بيتها؟","يوسف")
 name = string.gsub(name," من النبي الذي طلب منه قومه أن ينزل لهم مائدة من السماء ؟","عيسى")
 name = string.gsub(name," من هو أول الأئمة الأربعة ؟","ابو حنيفه")
@@ -7050,7 +7050,7 @@ if text == "اعلان البوت" and ChCheck(msg) then
 if not msg.ControllerBot then 
 return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
-local CmdStart = '*\n✯︙أهلآ بك في بوت '..(Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")..
+local CmdStart = '*\n✯︙أهلآ بك في بوت '..(Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")..
 '\n✯︙اختصاص البوت حماية المجموعات'..
 '\n✯︙لتفعيل البوت عليك اتباع مايلي ...'..
 '\n✯︙اضف البوت الى مجموعتك'..
@@ -7069,7 +7069,7 @@ data = {
 }
 local idephoto = Redis:get(TheWaTaN..':WELCOME_BOT')
 if idephoto then
-local Bot_Name = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")
+local Bot_Name = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -8310,12 +8310,12 @@ Redis:del(TheWaTaN.."Bots:ProNames:UserNum"..msg.chat_id..msg.sender_id.user_id)
 if UserInfo.username then
 UserInfousername = ''..UserInfo.username..''
 else
-UserInfousername = 'BJlll17'
+UserInfousername = 'I74III1'
 end
-merolua.sendText(msg.chat_id, msg.id, "⌁︙العضو ↫ ["..UserInfo.first_name.."](https://t.me/"..(UserInfousername or "BJlll17")..")\n⌁︙تم كتمه بسبب عدم وضع توحيد المجموعه بجانب اسمه يجب عليه وضع التوحيد ","md",true)
+merolua.sendText(msg.chat_id, msg.id, "⌁︙العضو ↫ ["..UserInfo.first_name.."](https://t.me/"..(UserInfousername or "I74III1")..")\n⌁︙تم كتمه بسبب عدم وضع توحيد المجموعه بجانب اسمه يجب عليه وضع التوحيد ","md",true)
 else 
 Redis:incrby(TheWaTaN.."Bots:ProNames:UserNum"..msg.chat_id..msg.sender_id.user_id,1)
-merolua.sendText(msg.chat_id, msg.id,  "⌁︙عذرا عزيزي ↫ ["..UserInfo.first_name.."](https://t.me/"..(UserInfousername or "BJlll17")..")\n⌁︙عليك وضع التوحيد ↫ "..Redis:get(TheWaTaN.."Bots:ProNames:Txt"..msg.chat_id).." بجانب اسمك\n⌁︙عدد المحاولات المتبقيه ↫ "..(tonumber(ProNamesTxt) - tonumber(UserNum)).."","md",true)
+merolua.sendText(msg.chat_id, msg.id,  "⌁︙عذرا عزيزي ↫ ["..UserInfo.first_name.."](https://t.me/"..(UserInfousername or "I74III1")..")\n⌁︙عليك وضع التوحيد ↫ "..Redis:get(TheWaTaN.."Bots:ProNames:Txt"..msg.chat_id).." بجانب اسمك\n⌁︙عدد المحاولات المتبقيه ↫ "..(tonumber(ProNamesTxt) - tonumber(UserNum)).."","md",true)
 end
 end
 end
@@ -9023,7 +9023,7 @@ Redis:del(TheWaTaN..':GroupUserCountMsg:'..msg.chat_id)
 Redis:del(TheWaTaN..':GroupNameUser:'..msg.chat_id)
 return merolua.sendText(msg.chat_id,msg.id,"تم تصغير الترند","md")
 end
-local Bot_Name = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")
+local Bot_Name = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")
 
 if not Redis:get(TheWaTaN.."WaTaN:Status:repleall") then
 local ss97 = {
@@ -11492,7 +11492,7 @@ end
 
 
 if text == 'الاصدار' and ChCheck(msg) then
-merolua.sendText(msg_chat_id,msg_id,'*✯︙اصدار سورس بغداد 3.0*',"md",true)  
+merolua.sendText(msg_chat_id,msg_id,'*✯︙اصدار سورس عوف 3.0*',"md",true)  
 end
 if text == "الساعه" and ChCheck(msg) or text == "الوقت" and ChCheck(msg) then
 local ramsesj20 = "\n الساعه الان : "..os.date("%I:%M%p")
@@ -11781,7 +11781,7 @@ if text and text:match('^رفع مطور اساسي @(%S+)$') and ChCheck(msg) t
 local UserName = text:match('^رفع مطور اساسي @(%S+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then
 YouCan = true
 else
 YouCan = false
@@ -11810,7 +11810,7 @@ if text and text:match('^تنزيل مطور اساسي @(%S+)$') and ChCheck(ms
 local UserName = text:match('^تنزيل مطور اساسي @(%S+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then
 YouCan = true
 else
 YouCan = false
@@ -11838,7 +11838,7 @@ end
 if text == ('رفع مطور اساسي') and ChCheck(msg) and msg.reply_to_message_id ~= 0 then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then
 YouCan = true
 else
 YouCan = false
@@ -11864,7 +11864,7 @@ end
 if text == ('تنزيل مطور اساسي') and ChCheck(msg) and msg.reply_to_message_id ~= 0 then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then
 YouCan = true
 else
 YouCan = false
@@ -11891,7 +11891,7 @@ if text and text:match('^رفع مطور اساسي (%d+)$') and ChCheck(msg) th
 local UserId = text:match('^رفع مطور اساسي (%d+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then
 YouCan = true
 else
 YouCan = false
@@ -11914,7 +11914,7 @@ if text and text:match('^تنزيل مطور اساسي (%d+)$') and ChCheck(msg
 local UserId = text:match('^تنزيل مطور اساسي (%d+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then
 YouCan = true
 else
 YouCan = false
@@ -11936,7 +11936,7 @@ end
 if text == 'مسح المطورين الاساسيين' and ChCheck(msg) then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then
 YouCan = true
 else
 YouCan = false
@@ -11954,7 +11954,7 @@ end
 if text == 'المطورين الاساسيين' and ChCheck(msg) then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1209927445) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(1884478855) then
 YouCan = true
 else
 YouCan = false
@@ -11981,7 +11981,7 @@ end
 
 
 if text == 'مطور السورس' and ChCheck(msg) or text == 'المبرمج' and ChCheck(msg) then  
-local UserId_Info = merolua.searchPublicChat("a_iuw")
+local UserId_Info = merolua.searchPublicChat("F9F9F")
 if UserId_Info.id then
 local UserInfo = merolua.getUser(UserId_Info.id)
 local InfoUser = merolua.getUserFullInfo(UserId_Info.id)
@@ -12001,7 +12001,7 @@ local TestText = "*✯︙𝙳𝙴𝚅 𝙽𝙰𝙼𝙴 : * ["..UserInfo.first_na
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- قناة السورس .', url='https://t.me/BJlll17'},
+{text = '- قناة السورس .', url='https://t.me/I74III1'},
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -12011,7 +12011,7 @@ local TestText = "- معلومات مطور السورس : \n\n*✯︙name:* [".
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- قناة السورس .', url='https://t.me/BJlll17'},
+{text = '- قناة السورس .', url='https://t.me/I74III1'},
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -12042,7 +12042,7 @@ local reply_markup = merolua.replyMarkup{type = 'inline',data = {
 }}
 merolua.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, TextingDevBot, "md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup)
 else
-local reply_markup = merolua.replyMarkup{type = 'inline',data = {{{text =UserInfo.first_name, url = 't.me/'..UserSudo}},{{text = '- قناة السورس .',url="t.me/BJlll17"}},}}	
+local reply_markup = merolua.replyMarkup{type = 'inline',data = {{{text =UserInfo.first_name, url = 't.me/'..UserSudo}},{{text = '- 𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝚆𝙰𝚃𝙰𝙽 .',url="t.me/I74III1"}},}}	
 merolua.sendText(msg_chat_id,msg_id,TextingDevBot,"md", true, false, false, false, reply_markup)
 end
 else
@@ -14885,7 +14885,7 @@ Abs = math.random(2,140);
 local Text ='*✯‍︙تم اختيار الشعر الاغنيه فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- قناة السورس .',url="t.me/BJlll17"}},
+{{text = '- قناة السورس .',url="t.me/I74III1"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/TEAMSUL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14895,7 +14895,7 @@ Abs = math.random(2,140);
 local Text ='*✯‍︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- قناة السورس .',url="t.me/BJlll17"}},
+{{text = '- قناة السورس .',url="t.me/I74III1"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -16355,7 +16355,7 @@ data = {
 {text = '{ نعم }', data = msg.sender_id.user_id..'/Nzlne'},{text = '{ لا }', data = msg.sender_id.user_id..'/noNzlne'},
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -18293,7 +18293,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20235,17 +20235,18 @@ if text == 'السورس' and ChCheck(msg) or text == 'سورس' and ChCheck(msg
 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- قناة السورس .',url="t.me/BJlll17"}},
-{{text = '- قناة التحديثات .',url="t.me/BBBBU3"}},
-{{text = '- لتنصيب السورس .',url="https://t.me/BJlll17"}},
-{{text = '- المطور .',url="t.me/a_iuw"},
-{text = '- تواصل السورس .',url="https://t.me/TITANICT1_bot"}},
-{{text = '- لتنصيب بوت .',url="https://t.me/BJlll17"}},
+{{text = '- قناة السورس .',url="t.me/I74III1"}},
+{{text = '- قناة التحديثات .',url="t.me/Hiiiilii"},
+{text = '- كروب السورس .',url="t.me/B_B_B_8"}},
+{{text = '- لتنصيب السورس .',url="https://t.me/I74III1"}},
+{{text = '- المطور .',url="t.me/F9F9F"},
+{text = '- تواصل السورس .',url="https://t.me/DDSSibot"}},
+{{text = '- لتنصيب بوت .',url="https://t.me/I74III1"}},
 }
 local msg_id = msg.id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/fff88883/7&caption=' .. URL.escape([[
+return https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/I74III1&caption=' .. URL.escape([[
 *⦑ Welcome to Source ⦒
-✯ ⦑ SOURCE BagHdaD ⦒
+✯ ⦑ SOURCE 3oF ⦒
 ✯ Source version : 2.0* 
 — — — — — — — — —
 ]]).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -20277,7 +20278,7 @@ data = {
 {text = '{ القفل / الفتح }', data = msg.sender_id.user_id..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = msg.sender_id.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20305,7 +20306,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20432,7 +20433,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20469,7 +20470,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20516,7 +20517,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20561,7 +20562,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20641,7 +20642,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20712,7 +20713,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20767,7 +20768,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20800,7 +20801,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20853,7 +20854,7 @@ local reply_markup = merolua.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -20925,8 +20926,8 @@ end
 Redis:del(TheWaTaN.."WaTaN:Name:Bot") 
 return merolua.sendText(msg_chat_id,msg_id,"✯︙تم مسح اسم البوت ","md",true)   
 end
-if text == (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد") then
-local NamesBot = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")
+if text == (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف") then
+local NamesBot = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")
 local NameBots = {
 "هـلا عـمري تفـضل",
 "عيون ["..NamesBot.."] العسليات",
@@ -20940,7 +20941,7 @@ local NameBots = {
 return merolua.sendText(msg_chat_id,msg_id, NameBots[math.random(#NameBots)],"md",true)  
 end
 if text == "بوت" and ChCheck(msg) then
-local NamesBot = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")
+local NamesBot = (Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")
 if msg.ControllerBot then 
 local su = {
 "اسمي القميل ["..NamesBot.."] ♥️",
@@ -20960,7 +20961,7 @@ return merolua.sendText(msg_chat_id,msg_id,BotName[math.random(#BotName)],"md",t
 end
 end
 if text == 'تنظيف المشتركين' and ChCheck(msg) then
-if msg.sender_id.user_id ~= 1209927445 then 
+if msg.sender_id.user_id ~= 1884478855 then 
 return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { مطور السورس }* ',"md",true)  
 end
 
@@ -20982,7 +20983,7 @@ return merolua.sendText(msg_chat_id,msg_id,'*✯︙العدد الكلي { '..#l
 end
 end
 if text == 'تنظيف المجموعات' and ChCheck(msg) then
-if msg.sender_id.user_id ~= 1209927445 then 
+if msg.sender_id.user_id ~= 1884478855 then 
 return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { مطور السورس }* ',"md",true)  
 end
 
@@ -22135,7 +22136,7 @@ Redis:sadd(TheWaTaN..'WaTaN:Num:User:Pv',msg.sender_id.user_id)
 if not msg.ControllerBot then
 if not Redis:get(TheWaTaN.."WaTaN:Start:Bot") then
 if photo and photo.total_count and photo.total_count > 0 then
-local CmdStart = '*\n✯︙أهلآ بك في بوت '..(Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")..
+local CmdStart = '*\n✯︙أهلآ بك في بوت '..(Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")..
 '\n✯︙اختصاص البوت حماية المجموعات'..
 '\n✯︙لتفعيل البوت عليك اتباع مايلي ...'..
 '\n✯︙اضف البوت الى مجموعتك'..
@@ -22149,16 +22150,16 @@ keyboardd.inline_keyboard = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '- لتنصيب بوت', url = 'https://t.me/BJlll17'}, 
+{text = '- لتنصيب بوت', url = 'https://t.me/I74III1'}, 
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 local msg_id = msg.id/2097152/0.5 
 return https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id='..msg.chat_id..'&caption='..URL.escape(CmdStart)..'&photo='..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboardd))
 else
-local CmdStart = '*\n✯︙أهلآ بك في بوت '..(Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "بغداد")..
+local CmdStart = '*\n✯︙أهلآ بك في بوت '..(Redis:get(TheWaTaN.."WaTaN:Name:Bot") or "عوف")..
 '\n✯︙اختصاص البوت حماية المجموعات'..
 '\n✯︙لتفعيل البوت عليك اتباع مايلي ...'..
 '\n✯︙اضف البوت الى مجموعتك'..
@@ -22173,10 +22174,10 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '- لتنصيب بوت', url = 'https://t.me/BJlll17'}, 
+{text = '- لتنصيب بوت', url = 'https://t.me/I74III1'}, 
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -22190,10 +22191,10 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '- لتنصيب بوت', url = 'https://t.me/BJlll17'}, 
+{text = '- لتنصيب بوت', url = 'https://t.me/I74III1'}, 
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -22288,12 +22289,12 @@ data = {
 },
 }
 }
-return merolua.sendText(msg_chat_id,msg_id,'✯︙اهلا بك عزيزي المطور\n✯︙اليك اوامر الكيبورد الخاصه بك\n✯︙تابع قناة السورس لتصلك اخر المنشورات @BJlll17\n✯︙تابع قناة التحديثات لتصلك اخر المنشورات @BBBBU3', 'md', false, false, false, false, reply_markup)
+return merolua.sendText(msg_chat_id,msg_id,'✯︙اهلا بك عزيزي المطور\n✯︙اليك اوامر الكيبورد الخاصه بك\n✯︙تابع قناة السورس لتصلك اخر المنشورات @I74III1\n✯︙تابع قناة التحديثات لتصلك اخر المنشورات @Hiiiilii', 'md', false, false, false, false, reply_markup)
 end
 end
 
 if text == 'تنظيف المشتركين ✯' and ChCheck(msg) then
-if msg.sender_id.user_id ~= 1209927445 then 
+if msg.sender_id.user_id ~= 1884478855 then 
 return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { مطور السورس }* ',"md",true)  
 end
 
@@ -22315,7 +22316,7 @@ return merolua.sendText(msg_chat_id,msg_id,'*✯︙العدد الكلي { '..#l
 end
 end
 if text == 'تنظيف المجموعات ✯' and ChCheck(msg) then
-if msg.sender_id.user_id ~= 1209927445 then 
+if msg.sender_id.user_id ~= 1884478855 then 
 return merolua.sendText(msg_chat_id,msg_id,'\n*✯︙هذا الامر يخص { مطور السورس }* ',"md",true)  
 end
 
@@ -22971,7 +22972,7 @@ end
 if tonumber(msg.sender_id.user_id) == 782717203 then
 msg.Name_Controller = 'مطــور السـورس 𖦴 '
 msg.The_Controller = 1
-elseif tonumber(msg.sender_id.user_id) == 1209927445 then
+elseif tonumber(msg.sender_id.user_id) == 1884478855 then
 msg.Name_Controller = 'مبرمج السـورس 𖦴 '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender_id.user_id) == true then  
@@ -23766,7 +23767,7 @@ gg = Redis:get(TheWaTaN.."nnonb"..Remsg.sender_id.user_id)
 uuuu = Redis:get(TheWaTaN.."nnonbn"..Remsg.sender_id.user_id)
 pppp = Redis:get(TheWaTaN.."zrffdcf"..Remsg.sender_id.user_id) or 0
 ballancee = Redis:get(TheWaTaN.."nool:flotysb"..Remsg.sender_id.user_id) or 0
-merolua.sendText(msg.chat_id,msg.id, "• الاسم ↢ "..news.."\n• الحساب ↢ `"..cccc.."`\n• بنك ↢ ( "..gg.." )\n• نوع ↢ ( "..uuuu.." )\n• الرصيد ↢ ( "..ballancee.." دينار 💸 )\n• الخمط ( "..pppp.." دينار 💸 )\n-","md",true)
+merolua.sendText(msg.chat_id,msg.id, "• الاسم ↢ "..news.."\n• الحساب ↢ `"..cccc.."`\n• بنك ↢ ( "..gg.." )\n• نوع ↢ ( "..uuuu.." )\n• الرصيد ↢ ( "..ballancee.." دينار 💸 )\n• الخمط ( "..pppp.." دينار ?? )\n-","md",true)
 else
 merolua.sendText(msg.chat_id,msg.id, "• ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -24473,7 +24474,7 @@ end
 File_Bot_Run(Message_Edit,Message_Edit)
 if tonumber(Message_Edit.sender_id.user_id) == 782717203 then
 data.The_Controller = 1
-elseif tonumber(Message_Edit.sender_id.user_id) == 1209927445 then
+elseif tonumber(Message_Edit.sender_id.user_id) == 1884478855 then
 data.The_Controller = 1
 elseif The_ControllerAll(Message_Edit.sender_id.user_id) == true then  
 data.The_Controller = 1
@@ -24574,7 +24575,7 @@ ChatId = data.chat_id
 Msg_id = data.message_id
 if tonumber(IdUser) == 782717203 then
 data.The_Controller = 1
-elseif tonumber(IdUser) == 1209927445 then
+elseif tonumber(IdUser) == 1884478855 then
 data.The_Controller = 1
 elseif The_ControllerAll(IdUser) == true then  
 data.The_Controller = 1
@@ -25282,7 +25283,7 @@ if #list >= tonumber(3) then
 Redis:del(TheWaTaN.."WaTaN:Num:okiktm"..ChatId)
 if tonumber(GetUserReply) == 782717203 then
 testser = true
-elseif tonumber(GetUserReply) == 1209927445 then
+elseif tonumber(GetUserReply) == 1884478855 then
 testser = true
 elseif The_ControllerAll(GetUserReply) == true then  
 testser = true
@@ -25407,7 +25408,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -25468,7 +25469,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -25564,7 +25565,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -25651,7 +25652,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -25722,7 +25723,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -25771,7 +25772,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -25839,7 +25840,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -25910,7 +25911,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -25954,7 +25955,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -26097,7 +26098,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -26150,7 +26151,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '- قناة السورس .', url = 't.me/BJlll17'}, 
+{text = '- قناة السورس .', url = 't.me/I74III1'}, 
 },
 }
 }
@@ -26975,7 +26976,7 @@ if Text and Text:match('(%d+)/onlinebott(.*)') then
   keyboard = {} 
   keyboard.inline_keyboard = {
     {{text="✯ غادر ✯",callback_data="/LeaveBotPic:"..IdUser},{text="✯ تعطيل ✯",callback_data= IdUser..'/offlinebotPic'..ChatId}},
-    {{text = '- قناة السورس .',url="t.me/BJlll17"}},
+    {{text = '- 𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝚆𝙰𝚃𝙰𝙽 .',url="t.me/I74III1"}},
   }
   local mm = Msg_id/2097152/0.5
   https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -26993,7 +26994,7 @@ if Text and Text:match('(%d+)/onlinebott(.*)') then
   keyboard = {} 
   keyboard.inline_keyboard = {
     {{text="✯ غادر ✯",callback_data="/LeaveBotPic:"..IdUser},{text="✯ تفعيل ✯",callback_data= IdUser..'/onlinebott'..ChatId}},
-    {{text = '- قناة السورس .',url="t.me/BJlll17"}},
+    {{text = '- 𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝚆𝙰𝚃𝙰𝙽 .',url="t.me/I74III1"}},
   }
   local mm = Msg_id/2097152/0.5
   https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -27020,7 +27021,7 @@ if Text and Text:match('(%d+)/onlinebott(.*)') then
   keyboard = {} 
   keyboard.inline_keyboard = {
     {{text="✯ غادر ✯",callback_data="/LeaveBotPic:"..IdUser},{text="✯ تفعيل ✯",callback_data= IdUser..'/onlinebott'..ChatId}},
-    {{text = '- قناة السورس .',url="t.me/BJlll17"}},
+    {{text = '- 𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝚆𝙰𝚃𝙰𝙽 .',url="t.me/I74III1"}},
   }
   local mm = Msg_id/2097152/0.5
   https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -27034,7 +27035,7 @@ if Text and Text:match('(%d+)/onlinebott(.*)') then
   local txxt = "✯︙تم مغادره البوت من المجموعة"
   keyboard = {} 
   keyboard.inline_keyboard = {
-    {{text = '- قناة السورس .',url="t.me/BJlll17"}},
+    {{text = '- 𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝚆𝙰𝚃𝙰𝙽 .',url="t.me/I74III1"}},
   }
   local mm = Msg_id/2097152/0.5
   https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
