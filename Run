@@ -1,60 +1,62 @@
-#!/bin/bash
+#!/usr/bin/env bash
 cd $(cd $(dirname $0); pwd)
-echo -e '\e[1m\e[31m
-Storm source is being installed, 
-Please wait until the installation is complete
-\033[0m'
-echo -e '\033[0;33m
-If it is the first time to install the source, send the number » {1}
-or اذا كانت اول مره تنصيب السورس ارسل رقم » {1}
-If you have already installed the source, send the number » {2}
-or اذا سبق ونصبت السورس ارسل رقم » {2}
-\033[0m'
-read Install
-case $Install in
-1)
-echo -e '\033[0;33mOffice installation has begun'
-sleep 2
-apt update
-apt upgrade
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install tmux
-sudo apt-get install luarocks
-sudo apt-get install screen
-sudo apt install zip
-sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
-sudo apt-get update
-sudo apt-get install
-sudo apt-get install upstart-sysv
-wget http://luarocks.org/releases/luarocks-2.2.2.tar.gz;tar zxpf luarocks-2.2.2.tar.gz;cd luarocks-2.2.2 && ./configure
-sudo make bootstrap
-sudo luarocks install luasocket
-sudo luarocks install luasec
-sudo luarocks install lua-term
-sudo luarocks install Lua-cURL
-sudo service redis-server start
-sudo apt-get install libconfig++9v5 -y 
-sudo apt-get install libstdc++6 -y
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y 
-sudo apt-get install lua-lgi -y  
-sudo apt-get install software-properties-common -y
-sudo apt-get install libnotify-dev -y 
-sudo apt-get install lua-space -y
-sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev -y
-sudo apt-get update 
-sudo apt-get upgrade -y
-cd ..
-rm -rf luarocks*
-unzip MeroLua.zip
-sudo mv MeroLua.so /usr/lib/x86_64-linux-gnu/lua/5.2/MeroLua.so
-sudo mv MeroTele.lua /usr/local/share/lua/5.2/MeroTele.lua
+install() {
+    sudo apt update
+    sudo apt install -y lua5.2
+    sudo apt-get install -y liblua5.2-dev
+    sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+    sudo apt upgrade -y
+    sudo apt install -y zip
+    sudo apt install -y build-essential checkinstall zlib1g-dev
+    sudo apt install -y g++-4.7 c++-4.7
+    sudo apt install -y gcc-4.9
+    sudo apt upgrade -y libstdc++6
+    sudo apt install -y libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
+    sudo apt install -y screen
+    sudo apt install -y libnotify-dev
+    sudo apt install -y libconfig++9v5 libstdc++6
+    sudo apt install -y libconfig++8-dev
+    sudo apt install -y lua-lgi
+    sudo apt install -y build-essential checkinstall zlib1g-dev
+    sudo apt install -y redis-server
+    sudo apt-get install -y lua-sec-dev
+
+    mkdir tmp
+    cd tmp
+    sudo apt --yes install build-essential libreadline-dev && sudo apt --yes install make && sudo apt --yes install cmake
+    wget https://github.com/ZdGram/libssl1.1_1.1.1f-1ubuntu2.12_amd64/raw/main/curl.tar.gz
+    tar -xzvf curl.tar.gz && sudo cp curl -r /usr/include/ && sudo rm -rf curl.tar.gz
+    sudo tar zxpf luarocks-2.4.3.tar.gz
+    curl -R -O http://www.lua.org/ftp/lua-5.3.4.tar.gz && tar -zxf lua-5.3.4.tar.gz && cd lua-5.3.4 && sudo make linux test && sudo make install && cd .. && sudo rm -rf lua-5.3.4.tar.gz && sudo rm -rf lua-5.3.4
+    wget https://luarocks.org/releases/luarocks-3.0.4.tar.gz && tar zxpf luarocks-3.0.4.tar.gz && cd luarocks-3.0.4 && ./configure && sudo make build && sudo make install && cd .. && sudo rm -rf luarocks-3.0.4 && sudo rm -rf luarocks-3.0.4.tar.gz
+    sudo apt-get update && sudo apt-get --yes install libreadline-dev libssl-dev lua5.1 liblua5.1-dev git make unzip redis-server curl libcurl4-gnutls-dev libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev tmux subversion && wget http://luarocks.org/releases/luarocks-2.2.2.tar.gz && tar zxpf luarocks-2.2.2.tar.gz && cd luarocks-2.2.2 && sudo ./configure && sudo make bootstrap && sudo luarocks install luasocket && sudo luarocks install luasec && sudo luarocks install redis-lua && sudo luarocks install lua-term && sudo luarocks install serpent && sudo apt-get --yes install curl && sudo luarocks install std.normalize && cd .. && sudo rm -rf luarocks-2.2.2.tar.gz && sudo rm -rf luarocks-2.2.2 && sudo luarocks install luaposix && sudo luarocks install copas && sudo luarocks install dkjson && sudo apt-get --yes install libcurl4-openssl-dev && sudo luarocks install Lua-cURL --server=https://luarocks.org/dev && sudo luarocks install lua-curl
+    sudo rm -rf luarocks-3.0.4* && sudo rm -rf lua-5.3.4* && sudo rm -rf lua-curl-error*
+    sudo luarocks install luarocks
+    sudo luarocks install luasec
+    sudo luarocks install luasocket
+    sudo luarocks install redis-lua
+    sudo luarocks install lua-term
+    sudo luarocks install serpent
+    sudo luarocks install dkjson
+    sudo luarocks install Lua-cURL
+
+    cd ..
+    rm -rf tmp
+    rm -rf luarocks*
+
+    wget https://github.com/ZdGram/libssl1.1_1.1.1f-1ubuntu2.12_amd64/raw/main/libssl1.1_1.1.1f-1ubuntu2.12_amd64.deb
+    sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.12_amd64.deb
+    sudo rm -rf libssl1.1_1.1.1f-1ubuntu2.12_amd64.deb
+    sudo timedatectl set-timezone Asia/Baghdad
+    unzip MeroLua.zip
+    sudo mv MeroLua.so /usr/lib/x86_64-linux-gnu/lua/5.2/MeroLua.so
+    sudo mv MeroTele.lua /usr/local/share/lua/5.2/MeroTele.lua
+    sudo lua5.2 WaTaN.lua
+}
+
+if [ "$1" = "install" ]; then
+    install
+fi
+
+sudo rm -rf MeroLua.zip
 sudo lua5.2 WaTaN.lua
-;;
-2)
-echo -e "\e[1m\e[32mThe bot is running now : جاري تشغيل البوت الان : \e[0m"
-sleep 2
-rm -rf MeroLua.zip
-sudo lua5.2 WaTaN.lua
-;;
-esac
